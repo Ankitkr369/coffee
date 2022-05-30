@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+<style>
+input{
+
+  width:300px
+}
+*label{
+  font-size: 30px;
+  font-weight: 100px;
+}
+button{
+  width:200px;
+  height: 30px;
+  background-color: aqua;
+}
+</style>
+  
+  </head>
+
+  <body>
+    <div id="order-form">
+      <!--Add your form html element here-->
+      <!--In form, give #name,#number and #address as HTML id's to relevant input elements -->
+      <!-- confirm button with id "confirm" -->
+
+
+
+<center><label>Name</label>
+<input type="text" placeholder="Enter Name"></center>
+<br>
+<br>
+<center><label>Number</label>
+<input type="number" placeholder="Enter Phone Number"></center>
+<br>
+<br>
+<center><label>Address</label>
+<input type="text" placeholder="Enter Address"></center>
+<br>
+<br>
+<center><button onclick="main()" id="confirm">Confirm</button></center>
+
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>
+<script>
+   
+function main(){
+ 
+let count=0
+setInterval(function(){
+  if(count<3){alert("order accepted")}
+  count++
+  if(count=3){alert("Your order is being Prepared ")}
+  if(count=8){alert("Your order is being packed ")}
+  if(count=10){alert("Your order is out for delivery ")}
+  if(count=12){alert("Order delivered ")}
+
+},1000)
+
+if(count>12){clearInterval()} 
+  
+}
+
+  
+
+ 
+
+</script>
